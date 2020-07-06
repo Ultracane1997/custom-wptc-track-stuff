@@ -107,3 +107,18 @@ struct colormap HMC_COLORMAP = {
 	.entries = HMC_ENTRIES,
 	.disturbancecolor = COLOR(0x80, 0xcc, 0xff)
 };
+
+/* MCC scale (1-minute winds). */
+struct colormapentry MCC_ENTRIES[6] = {
+	{.name = "MS", .value = COLOR(0x5e, 0xba, 0xff), .wind = 0},
+	{.name = "SMS", .value = COLOR(0x00, 0xfa, 0xf4), .wind = 34},
+	{.name = "MC", .value = COLOR(0xff, 0xff, 0xcc), .wind = 50},
+	{.name = "MMC", .value = COLOR(0xff, 0xc1, 0x40), .wind = 64},
+	{.name = "SMC", .value = COLOR(0xff, 0x60, 0x60), .wind = 83},
+	{.name = "SENTINEL", .value = COLOR(0xff, 0xff, 0xff), .wind = 0x7fffffff}
+};
+struct colormap MCC_COLORMAP = {
+	.numcolors = 5,
+	.entries = MCC_ENTRIES,
+	.disturbancecolor = COLOR(0x80, 0xcc, 0xff)
+};

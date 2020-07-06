@@ -8,6 +8,7 @@
 #define JMA_CODE 3
 #define MFR_CODE 4
 #define HMC_CODE 5
+#define MCC_CODE 6
 struct colormapentry {
 	double value[3];
 	int wind;
@@ -31,3 +32,5 @@ struct colormapentry MFR_ENTRIES[8];
 struct colormap MFR_COLORMAP;
 struct colormapentry HMC_ENTRIES[14];
 struct colormap HMC_COLORMAP;
+struct colormapentry MCC_ENTRIES[6];
+struct colormap MCC_COLORMAP;
