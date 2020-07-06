@@ -85,21 +85,40 @@ struct colormap MFR_COLORMAP = {
 	.disturbancecolor = COLOR(0x80, 0xcc, 0xff) // Must be understood to mean ZODW not TDi
 };
 
-/* Extended SSHWS scale (1-minute winds). */
-struct colormapentry ESSHWS_ENTRIES[10] = {
+/* HMC scale (1-minute winds). */
+struct colormapentry HMC_ENTRIES[14] = {
 	{.name = "TD", .value = COLOR(0x5e, 0xba, 0xff), .wind = 0},
 	{.name = "TS", .value = COLOR(0x00, 0xfa, 0xf4), .wind = 34},
-	{.name = "ST", .value = COLOR(0xa0, 0x0c, 0x0c), .wind = 55},
 	{.name = "C1", .value = COLOR(0xff, 0xff, 0xcc), .wind = 64},
 	{.name = "C2", .value = COLOR(0xff, 0xe7, 0x75), .wind = 83},
 	{.name = "C3", .value = COLOR(0xff, 0xc1, 0x40), .wind = 96},
 	{.name = "C4", .value = COLOR(0xff, 0x8f, 0x20), .wind = 114},
 	{.name = "C5", .value = COLOR(0xff, 0x60, 0x60), .wind = 137},
-	{.name = "C6", .value = COLOR(0xff, 0x14, 0x14), .wind = 165},
+	{.name = "C6", .value = COLOR(0xff, 0x14, 0x14), .wind = 169},
+	{.name = "C7", .value = COLOR(0xa0, 0x0c, 0x0c), .wind = 212},
+	{.name = "C8", .value = COLOR(0x97, 0x24, 0x46), .wind = 265},
+	{.name = "C9", .value = COLOR(0xbd, 0x2a, 0x67), .wind = 312},
+	{.name = "C10", .value = COLOR(0xd3, 0x4e, 0x99), .wind = 378},
+	{.name = "HYC", .value = COLOR(0xff, 0x99, 0xff), .wind = 434},
 	{.name = "SENTINEL", .value = COLOR(0xff, 0xff, 0xff), .wind = 0x7fffffff}
 };
-struct colormap ESSHWS_COLORMAP = {
-	.numcolors = 9,
-	.entries = ESSHWS_ENTRIES,
+struct colormap HMC_COLORMAP = {
+	.numcolors = 13,
+	.entries = HMC_ENTRIES,
+	.disturbancecolor = COLOR(0x80, 0xcc, 0xff)
+};
+
+/* MCC scale (1-minute winds). */
+struct colormapentry MCC_ENTRIES[6] = {
+	{.name = "MS", .value = COLOR(0x5e, 0xba, 0xff), .wind = 0},
+	{.name = "SMS", .value = COLOR(0x00, 0xfa, 0xf4), .wind = 34},
+	{.name = "MC", .value = COLOR(0xff, 0xff, 0xcc), .wind = 50},
+	{.name = "MMC", .value = COLOR(0xff, 0xc1, 0x40), .wind = 64},
+	{.name = "SMC", .value = COLOR(0xff, 0x60, 0x60), .wind = 83},
+	{.name = "SENTINEL", .value = COLOR(0xff, 0xff, 0xff), .wind = 0x7fffffff}
+};
+struct colormap MCC_COLORMAP = {
+	.numcolors = 5,
+	.entries = MCC_ENTRIES,
 	.disturbancecolor = COLOR(0x80, 0xcc, 0xff)
 };
