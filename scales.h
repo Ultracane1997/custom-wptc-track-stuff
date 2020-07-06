@@ -7,8 +7,7 @@
 #define IMD_CODE 2
 #define JMA_CODE 3
 #define MFR_CODE 4
-#define HMC_CODE 5
-#define MCC_CODE 6
+#define ESSHWS_CODE 5
 struct colormapentry {
 	double value[3];
 	int wind;
