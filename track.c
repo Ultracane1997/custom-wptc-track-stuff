@@ -120,10 +120,8 @@ static int get_scale_code(const char* scalename) {
 		return JMA_CODE;
 	} else if (strcasecmp("MFR", scalename) == 0) {
 		return MFR_CODE;
-	} else if (strcasecmp("HMC", scalename) == 0) {
-		return HMC_CODE;
-	} else if (strcasecmp("MCC", scalename) == 0) {
-		return MCC_CODE;
+	} else if (strcasecmp("ESSHWS", scalename) == 0) {
+		return ESSHWS_CODE;
 	}
 	else {
 		return SSHWS_CODE;
