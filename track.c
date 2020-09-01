@@ -568,10 +568,10 @@ static void get_color(double *r, double *g, double *b, struct pos *pos, struct c
     return;
   }
 
-  for (i = 0; i < 10 && colors->entries[i + 1].wind < pos->wind; i++) {
+  for (i = 0; i < 14 && colors->entries[i + 1].wind < pos->wind; i++) {
     /* Skip down until we get to the right category. */
   }
-  if (i >= 11) {
+  if (i >= 15) {
 	  printf("Attempting to access illegal color\n");
    }
   *r = colors->entries[i].value[0];
