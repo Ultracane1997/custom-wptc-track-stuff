@@ -86,7 +86,7 @@ struct colormap MFR_COLORMAP = {
 };
 
 /* Extended SSHWS scale (1-minute winds). */
-struct colormapentry ESSHWS_ENTRIES[10] = {
+struct colormapentry ESSHWS_ENTRIES[14] = {
 	{.name = "TD", .value = COLOR(0x5e, 0xba, 0xff), .wind = 0},
 	{.name = "TS", .value = COLOR(0x00, 0xfa, 0xf4), .wind = 34},
 	{.name = "STS", .value = COLOR(0x92, 0xd9, 0xf4), .wind = 52},
@@ -95,11 +95,15 @@ struct colormapentry ESSHWS_ENTRIES[10] = {
 	{.name = "C3", .value = COLOR(0xff, 0xc1, 0x40), .wind = 96},
 	{.name = "C4", .value = COLOR(0xff, 0x8f, 0x20), .wind = 114},
 	{.name = "C5", .value = COLOR(0xff, 0x60, 0x60), .wind = 137},
-	{.name = "C6", .value = COLOR(0xb7, 0x00, 0x00), .wind = 165},
+	{.name = "C6", .value = COLOR(0xb7, 0x00, 0x00), .wind = 169},
+	{.name = "C7", .value = COLOR(0xcc, 0x00, 0x33), .wind = 212},
+	{.name = "C8", .value = COLOR(0xcc, 0x00, 0xaa), .wind = 265},
+	{.name = "C9", .value = COLOR(0x9b, 0x30, 0xff), .wind = 312},
+	{.name = "C10", .value = COLOR(0xf9, 0xa7, 0xb0), .wind = 378},
 	{.name = "SENTINEL", .value = COLOR(0xff, 0xff, 0xff), .wind = 0x7fffffff}
 };
 struct colormap ESSHWS_COLORMAP = {
-	.numcolors = 9,
+	.numcolors = 13,
 	.entries = ESSHWS_ENTRIES,
 	.disturbancecolor = COLOR(0x80, 0xcc, 0xff)
 };
